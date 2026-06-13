@@ -1,0 +1,11 @@
+---
+- hosts: all
+  become: true
+  connection: local 
+  tasks:
+    - name: Powering on the virtual machine
+      delegate_to: localhost
+      azure_rm_virtualmachine:
+        resource_group: vm-rg
+        name: "{{ inventory_hostname }}"
+        started: true

@@ -1,0 +1,7 @@
+---
+- name: testing
+  hosts: linux
+  connection: local
+  tasks:
+    - name: working with uname
+      command: uname -a

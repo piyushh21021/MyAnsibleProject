@@ -1,0 +1,6 @@
+---
+- name: creating servers
+  hosts: localhost
+  connection: local
+  roles:
+    - vm_create

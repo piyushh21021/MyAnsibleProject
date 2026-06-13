@@ -1,0 +1,4 @@
+#SPDX-License-Identifier: MIT-0
+---
+# vars file for vm_create
+my_pub_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDscUameYKIG1rkBtdXnnC+ZzjA14ugjAq8yr2eMyfafiKmDsYcLFxmhNztxmAVIIdqVRYOCzJ5rPs1LbxqjEpqG42VH06rygOGLyzar1kmBsbM/RWsktjhp9MsB13X7evrCdy/QG0iTrw3y57sZduK0TYkQLiebDivbC5pi6jl1I/qYNNAlv2w1izwPhif3ber6wV+01hxtPbUCMHF8jftHj3omztAL6lEkU3DdSuaAkcUwoUKTNtwMYWtClM5yD0ll/FLsR6ZT3oOiLg2M90cCOLt/kvuCI/GSUyzMTCrdcWquZSCSOfoF532JlsT3uCV6PEJNB/gmJNj9AGwFtrH rsa-key-20260602"

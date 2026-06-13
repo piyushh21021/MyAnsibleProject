@@ -1,0 +1,33 @@
+#SPDX-License-Identifier: MIT-0
+---
+# tasks file for vm_create
+- name: Create VM with defaults
+  azure_rm_virtualmachine:
+    resource_group: vm-rg
+    name: "{{ item.name }}"
+    admin_username: "iamadmin"
+    vm_size: Standard_B1s
+    managed_disk_type: "StandardSSD_LRS"
+    ssh_password_enabled: false
+    ssh_public_keys:
+      - path: "/home/iamadmin/.ssh/authorized_keys"
+        key_data: "{{ my_pub_key }}"
+    image:
+      offer: "{{ item.offer }}"
+      publisher: "{{ item.publisher }}"
+      sku: "{{ item.sku }}"
+      version: "{{ item.version }}"
+    plan: "{{ { 'name': item.plan_name, 'product': item.offer, 'publisher': item.publisher } if item.plan_name is defined else omit }}"
+  loop:
+    - { offer: "rockylinux-x86_64",
+        publisher: "resf",
+        sku: "9-base",
+        version: "latest",
+        name: "server1",
+        plan_name: "9-base"}
+
+    - { publisher: "almalinux",
+        offer: "almalinux-x86_64",
+        sku: "9-gen2",
+        version: "latest",
+        name: "server2"}

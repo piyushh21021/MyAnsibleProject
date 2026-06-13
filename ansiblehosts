@@ -1,0 +1,6 @@
+[local]
+localhost ansible_connection=local ansible_python_interpreter=/root/.local/share/pipx/venvs/ansible-core/bin/python
+
+[linux]
+server2
+server1

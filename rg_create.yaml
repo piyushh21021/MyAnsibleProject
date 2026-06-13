@@ -1,0 +1,6 @@
+---
+- name: creating resource group
+  hosts: all
+  connection: local
+  roles:
+    - rg
